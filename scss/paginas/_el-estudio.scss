@@ -66,12 +66,16 @@
     }
 
     .estudio{
+        display: flex;
         flex-direction: column;
         align-items: center;
+       
+
         .segundop{
             background-color: transparent;
             color: black;
             padding-top: 2%;
+            margin-top: 8%;
         }
     }
     
