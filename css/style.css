@@ -11883,7 +11883,7 @@ textarea.form-control-lg {
 body {
   background-image: url("../imagenes/Galeria-principal-estudio1.jpg.png");
   background-repeat: no-repeat;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   background-size: cover;
 }
 body nav {
@@ -11906,6 +11906,8 @@ a:hover {
 
 .naranja {
   color: #c77415;
+  border-radius: 30px;
+  border-color: #c77415;
   font-size: x-large;
 }
 
@@ -11988,10 +11990,33 @@ a:hover {
     width: 80vw;
   }
 }
+@keyframes rotacion {
+  0% {
+    rotate: 15deg;
+  }
+  100% {
+    rotate: -15deg;
+  }
+}
+.orden {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: inline-block;
+  background-color: rgba(184, 109, 22, 0.753);
+  padding: 10%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+
 .equipo {
   font-size: x-large;
-  color: rgb(180, 109, 52);
-  background-color: rgb(97, 6, 6);
+  color: rgb(97, 6, 6);
+  background-color: transparent;
   font-weight: bold;
   display: inline-block;
   margin: 50px 10px;
@@ -12004,6 +12029,35 @@ h4, .h4 {
   font-size: large;
 }
 
+.dudas {
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  color: rgb(180, 109, 52);
+  background-color: rgb(97, 6, 6);
+  text-align: center;
+  padding: 5%;
+  border-radius: 50px;
+  position: relative;
+  animation: rotacion 1s 5.5 alternate-reverse;
+}
+.dudas a {
+  text-decoration: none;
+  color: rgb(240, 159, 39);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .orden {
+    flex-direction: column;
+  }
+  .dudas {
+    padding: 0;
+    width: 50%;
+    border-radius: 0%;
+  }
+}
 .exp {
   display: flex;
   justify-content: center;
@@ -12042,6 +12096,8 @@ h4, .h4 {
   margin-top: 5%;
   position: relative;
   animation: opacity 4s;
+  background-color: rgba(184, 109, 22, 0.753);
+  padding: 7%;
 }
 .p p {
   height: 60px;
