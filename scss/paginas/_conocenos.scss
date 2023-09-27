@@ -1,49 +1,97 @@
-.conocenos {  display: grid;
-    grid-template-columns: 25vw 15vw 22vw 18vw;
-    grid-template-rows: 20vw 14vw 16vw 19vw;
-    grid-auto-columns: 1fr;
-    gap: 2px 0px;
-    margin-left: 15%;
-    justify-items: end;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "titulo titulo foto1 foto1"
-      "texto texto foto1 foto1"
-      "texto texto foto2 ."
-      "texto texto . foto3";
-      img{
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
+
+
+.conocenos { 
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+
+      .sectiondos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        img{
+          height: 30vw;
+          width: 30vw;
         }
 
-        section{
-            width: 35vw;
-            height: 50vw;
-            margin-left: 10vw;
+      .foto1{
+          width: 50vw;
+          padding-left: 15%;
+        }
+
+      .foto2{
+        height: 20vw;
+        
+      }
+
+      .foto3{
+        width: 38vw;
+        height: 25vw;
+        padding-left: 40%;
+      }
+
+      }
+      
+        .sectionuno{
+            width: 40vw;
+            height: 78vw;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            background-color: transparentize($color: #b60505ab, $amount: 5);
-            border-color: black;
-            border-style: dashed;
+            background-color: transparentize($color: #b60505ab, $amount: 0);
+            border-color: rgb(224, 108, 30);
+            border-style: ridge;
+            border-radius: 15px;
+          
+            .titulo { font-family: Alegra-bold;}
+          
+            .texto {
+              p{
+              font-family: Alegra-bold;
+              font-weight: bolder;
+              font-size: 120%;
+              }
+            }
         }
-        
+      }
+
+  
+
+  
+
+
+  @media (max-width: 800px) {
+    .conocenos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .sectionuno{
+        width: 100%;
+        margin: 2%;
+        height: fit-content;
+      }
+
+    .sectiondos{
+
+      flex-wrap: wrap;
+      align-content: center;
     
+      .foto1{
+        padding: 0%;
+        width: 80%;
+        height: 100%;
+      }
+
+      .foto2{
+        display:none
+      }
+
+      .foto3{ 
+      display:none
+      }
     }
-
-  
-  .foto1 { grid-area: foto1;
-    width: 80%;
-    height: 65%;}
-  
-  .foto2 { grid-area: foto2; }
-  
-  .foto3 { grid-area: foto3; }
-  
-  .titulo { grid-area: titulo; }
-  
-  .texto { grid-area: texto; }
-
-  
+   }
+  }

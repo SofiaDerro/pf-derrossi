@@ -11,7 +11,7 @@
     .orden{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -48,10 +48,10 @@
         color:rgb(180, 109, 52);
         background-color: rgb(97, 6, 6);
         text-align: center;
-        padding: 5%;
+        padding: 4%;
         border-radius: 50px;
         position: relative;
-        animation: rotacion 1s 5.5 alternate-reverse;
+        animation: rotacion 1s infinite alternate-reverse;
         
         a{
             text-decoration: none;
