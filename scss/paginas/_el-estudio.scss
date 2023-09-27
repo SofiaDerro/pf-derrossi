@@ -41,21 +41,21 @@
                 background-color: rgb(97, 6, 6);
                 text-align: center;
                 align-items: center;
-                height: 10vw;
                 width: 30vw;
                 font-family: Alegra-bold;
                 font-size: larger;
                 position: relative;
                 animation: opacity 3s;
                 border-radius: 50px;
+                height: fit-content;
+                
         }
     }
 
 @media (max-width:700px){
     
     .galeria{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(2, 40vw);
         margin: 0%;
 
     }
@@ -65,21 +65,37 @@
         justify-content: center;
     }
 
+    .none{
+        display: none;
+    }
+    .none3{
+        display: none;
+    }
+
+    .none2{
+        display: none;
+    }
+
+
     .estudio{
         display: flex;
         flex-direction: column;
         align-items: center;
-       
+        margin: 0%;
 
         .segundop{
             background-color: transparent;
             color: black;
             padding-top: 2%;
             margin-top: 8%;
+            height: fit-content;
         }
     }
     
     .mapa{
-        width: 80vw;
+        position: relative;
+        animation: opacity 2s;
+        height: max-content;
+        width: max-content;
     }
 }
