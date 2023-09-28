@@ -12197,6 +12197,10 @@ h4, .h4 {
   text-align: center;
 }
 
+.queda {
+  display: none;
+}
+
 .text {
   display: flex;
   flex-direction: column;
@@ -12259,9 +12263,33 @@ footer svg {
     padding: 15%;
     text-align: center;
     font-size: medium;
-    background-color: black;
     border-radius: 50px;
     align-items: center;
+    width: fit-content;
+    height: min-content;
+  }
+}
+@media (max-width: 650px) {
+  #carouselExample {
+    display: none;
+  }
+  .p {
+    display: flex;
+    margin-top: 15%;
+    padding: 0;
+    border-radius: 50px;
+  }
+  .queda {
+    display: flex;
+    width: 100%;
+    margin-top: 10%;
+    border-radius: 10px;
+  }
+  .text {
+    margin-top: 0%;
+  }
+  .text .uno {
+    margin-top: 10%;
   }
 }
 * {
