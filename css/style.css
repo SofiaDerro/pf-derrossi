@@ -12145,12 +12145,44 @@ h4, .h4 {
     border-radius: 0%;
   }
 }
+@keyframes aparece {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 0;
+  }
+}
 .exp {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.exp .video {
-  height: 300px;
+.exp .principio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  position: relative;
+  animation: aparece 7s;
+  width: 100%;
+  padding: 15% 8%;
+  background-color: rgb(97, 6, 6);
+}
+.exp .principio h2, .exp .principio .h2 {
+  width: fit-content;
+  position: relative;
+  animation: opacity 5s;
+}
+.exp .principio h3, .exp .principio .h3 {
+  position: relative;
+  animation: opacity 8s;
+  color: rgba(184, 109, 22, 0.753);
+}
+.exp iframe {
+  margin-top: 10%;
 }
 
 @keyframes movimiento {
