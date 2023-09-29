@@ -12166,7 +12166,7 @@ h4, .h4 {
   align-items: center;
   font-size: x-large;
   position: relative;
-  animation: aparece 7s;
+  animation: aparece 2s;
   width: 100%;
   padding: 15% 8%;
   background-color: rgb(97, 6, 6);
@@ -12185,6 +12185,75 @@ h4, .h4 {
   margin-top: 10%;
 }
 
+.videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 65vw;
+}
+
+.video1 {
+  height: 25%;
+  width: 125%;
+}
+
+.video2 {
+  height: 25%;
+  width: 125%;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.animate {
+  display: flex;
+  background-color: #c77415;
+  height: 25vw;
+  position: relative;
+  animation: rotacion 8s 5 alternate-reverse;
+  border-radius: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.animate h4, .animate .h4 {
+  position: relative;
+  animation: aparece 5s;
+}
+
+@media (max-width: 750px) {
+  .principio h2, .principio .h2 {
+    font-size: large;
+  }
+  .principio h3, .principio .h3 {
+    font-size: medium;
+  }
+  .exp iframe {
+    height: 50%;
+    width: 50%;
+    margin-bottom: 10%;
+  }
+  .video1 {
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .video2 {
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+  .animate {
+    margin-top: 10%;
+  }
+  .todo {
+    flex-direction: column;
+  }
+}
 @keyframes movimiento {
   0% {
     left: -300px;
